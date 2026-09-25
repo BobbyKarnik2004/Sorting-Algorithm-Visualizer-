@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Sorting Algorithm Visualizer</h1>
+    <p>Visualize and compare popular sorting algorithms</p>
+</header>
+
+<main class="container">
+    <section class="controls">
+        <div class="control-group">
+            <label for="algorithm">Algorithm</label>
+            <select id="algorithm">
+                <option value="bubble">Bubble Sort</option>
+                <option value="selection">Selection Sort</option>
+                <option value="insertion">Insertion Sort</option>
+                <option value="merge">Merge Sort</option>
+                <option value="quick">Quick Sort</option>
+                <option value="heap">Heap Sort</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="size">Array Size: <span id="sizeValue">50</span></label>
+            <input type="range" id="size" min="10" max="100" value="50">
+        </div>
+
+        <div class="control-group">
+            <label for="speed">Speed: <span id="speedValue">50</span></label>
+            <input type="range" id="speed" min="1" max="100" value="50">
+        </div>
+
+        <div class="buttons">
+            <button id="generateBtn">Generate Array</button>
+            <button id="sortBtn">Start Sorting</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-card">
+            <h3>Comparisons</h3>
+            <p id="comparisons">0</p>
+        </div>
+        <div class="stat-card">
+            <h3>Execution Time</h3>
+            <p id="executionTime">0 ms</p>
+        </div>
+        <div class="stat-card">
+            <h3>Algorithm</h3>
+            <p id="currentAlgorithm">Bubble Sort</p>
+        </div>
+    </section>
+
+    <section class="visualizer">
+        <div id="arrayContainer"></div>
+    </section>
+
+    <section class="complexity">
+        <h2>Algorithm Complexity</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Algorithm</th>
+                        <th>Best</th>
+                        <th>Average</th>
+                        <th>Worst</th>
+                        <th>Space</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Bubble Sort</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td><td>O(1)</td></tr>
+                    <tr><td>Selection Sort</td><td>O(n²)</td><td>O(n²)</td><td>O(n²)</td><td>O(1)</td></tr>
+                    <tr><td>Insertion Sort</td><td>O(n)</td><td>O(n²)</td><td>O(n²)</td><td>O(1)</td></tr>
+                    <tr><td>Merge Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n)</td></tr>
+                    <tr><td>Quick Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n²)</td><td>O(log n)</td></tr>
+                    <tr><td>Heap Sort</td><td>O(n log n)</td><td>O(n log n)</td><td>O(n log n)</td><td>O(1)</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Sorting Algorithm Visualizer | HTML, CSS, JavaScript & DSA</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
